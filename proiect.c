@@ -62,7 +62,29 @@ void postOrder(struct Node* node){
 	}
 }
 
+void levelOrder(struct Node* node){
+	if (node==NULL) return;
 
+	struct Node* coada[100];
+	int front=0;
+	int back=0;
+
+	coada[back++]=node;
+
+	while(front<back){
+		struct Node* current=coada[front++];
+		printf("%d", current->key);
+
+		if(current->left!=NULL){
+			coada[back++]=current->left;
+		}
+
+		if(current->right!=NULL){
+			coada[back++]=current->right;
+		}
+	}
+
+}
 
 
 
