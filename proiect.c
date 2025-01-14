@@ -38,7 +38,7 @@ struct Node* insert(struct Node* node, int key){
 
 void preOrder(struct Node* node){
 	if(node!=NULL){
-		printf(%d, node->key);
+		printf("%d, node->key");
 		preOrder(node->left);
 		preOrder(node->right);
 	}
@@ -48,7 +48,7 @@ void preOrder(struct Node* node){
 void inOrder(struct Node* node){
 	if(node!=NULL){
 		inOrder(node->left);
-		printf(%d, node->key);
+		printf("%d, node->key");
 		inOrder(node->right);
 	}
 }
@@ -58,7 +58,7 @@ void postOrder(struct Node* node){
 	if(node!=NULL){
 		postOrder(node->left);
 		postOrder(node->right);
-		printf(%d, node->key);
+		printf("%d, node->key");
 	}
 }
 
