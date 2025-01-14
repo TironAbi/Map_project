@@ -111,6 +111,9 @@ int main(){
 	postOrder(root);
 	printf("\n");
 
+	printf("Traversare pe niveluri: \n");
+	levelOrder(root);
+	printf("\n");
 
 	return 0;
 }
