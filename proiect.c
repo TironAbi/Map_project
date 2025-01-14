@@ -36,6 +36,33 @@ struct Node* insert(struct Node* node, int data){
 }
 
 
+void preOrder(struct Node* node){
+	if(node!=NULL){
+		printf(%d, node->data);
+		preOrder(node->left);
+		preOrder(node->right);
+	}
+}
+
+
+void inOrder(struct Node* node){
+	if(node!=NULL){
+		inOrder(node->left);
+		printf(%d, node->data);
+		inOrder(node->right);
+	}
+}
+
+
+void postOrder(struct Node* node){
+	if(node!=NULL){
+		postOrder(node->left);
+		postOrder(node->right);
+		printf(%d, node->data);
+	}
+}
+
+
 
 
 int main(){
