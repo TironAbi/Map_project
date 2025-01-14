@@ -77,6 +77,18 @@ int main(){
 		root=insert(root, elements[i]);
 	}
 
+	printf("Traversare in pre-ordine: \n");
+	preOrder(root);
+	printf("\n");
+
+	printf("Traversare in in-ordine: \n");
+	inOrder(root);
+	printf("\n");
+
+	printf("Traversare in post-ordine: \n");
+	postOrder(root);
+	printf("\n");
+
 
 	return 0;
 }
