@@ -25,6 +25,6 @@ jobs:
     - name: Build the Docker image
       env:
         IMAGE_NAME: ghcr.io/tironabi/map_project
-        run: | 
+      run: | 
           docker build . --file Dockerfile --tag $IMAGE_NAME:latest
           docker push $IMAGE_NAME:latest
