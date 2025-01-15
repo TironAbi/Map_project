@@ -1,0 +1,30 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build the Docker image
+      env:
+        IMAGE_NAME: ghcr.io/tironabi/map_project
+        run: | 
+          docker build . --file Dockerfile --tag $IMAGE_NAME:latest
+          docker push $IMAGE_NAME:latest
