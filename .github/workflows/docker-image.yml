@@ -23,6 +23,8 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build the Docker image
+    
+      id: docker_build
       env:
         IMAGE_NAME: ghcr.io/tironabi/map_project
       run: | 
