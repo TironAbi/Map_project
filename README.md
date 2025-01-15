@@ -72,6 +72,8 @@ Structura rezultată a arborelui binar este:
 
 
 ### Rezultatele Traversării
+![Screenshot 2025-01-15 132824](https://github.com/user-attachments/assets/7c518b00-f04a-44f4-9430-1d4ffc54268b)
+
 
 -   **Pre-ordine**: `50 30 20 40 70 60 80`
     
